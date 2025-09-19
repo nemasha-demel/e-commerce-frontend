@@ -6,7 +6,7 @@
    export const Api = createApi({
      reducerPath: "Api",
      baseQuery: fetchBaseQuery({
-       baseUrl: `${VITE_BASE_URL}/api`,
+       baseUrl: `${import.meta.env.VITE_BASE_URL}/api`, 
        prepareHeaders: async (headers) => {
          return new Promise((resolve) => {
            async function checkToken() {
